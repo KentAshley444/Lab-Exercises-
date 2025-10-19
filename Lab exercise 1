@@ -4,7 +4,7 @@ lab 1
 $data = array(
     "name" => "Kent Ashley",
     "age" => 23,
-    "course" => "IT3J"
+    "course" => "IT"
 );
 echo json_encode($data);
 ?>
