@@ -1,0 +1,14 @@
+<?php
+$input = file_get_contents('php://input');
+$data = json_decode($input);
+
+if (is_null($data)) {
+    $data = json_decode('{"username":"Kent Ashley","password":"1234"}');
+}
+
+$username = isset($data->username) ? $data->username : '';
+$password = isset($data->password) ? $data->password : '';
+
+echo "Username: " . $username . PHP_EOL;
+echo "Password: " . $password;
+?>
