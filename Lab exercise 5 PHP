@@ -1,0 +1,21 @@
+PHP
+
+<?php
+$data = json_decode(file_get_contents("php://input"), true);
+
+if (isset($data['name']) && !empty(trim($data['name']))) {
+    $name = htmlspecialchars($data['name']);
+    $response = [
+        "status" => "success",
+        "message" => "Welcome, $name!"
+    ];
+} else {
+    $response = [
+        "status" => "error",
+        "message" => "Please enter your name."
+    ];
+}
+
+header('Content-Type: application/json');
+echo json_encode($response);
+?>
