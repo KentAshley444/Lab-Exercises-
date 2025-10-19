@@ -1,0 +1,10 @@
+lab 1
+
+<?php
+$data = array(
+    "name" => "Kent Ashley",
+    "age" => 23,
+    "course" => "IT3J"
+);
+echo json_encode($data);
+?>
